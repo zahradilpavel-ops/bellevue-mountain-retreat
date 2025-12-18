@@ -35,7 +35,7 @@ const ApartmentDescription = () => {
 
             {/* Features list */}
             <div className="mt-8 grid grid-cols-2 gap-3">
-              {["2 pokoje", "Soukromá terasa", "Plně vybavená kuchyně", "Podlahové topení", "Wi-Fi & TV", "Parkování"].map((feature, index) => <div key={index} className="flex items-center gap-2">
+              {["1 ložnice", "Soukromá terasa", "Plně vybavená kuchyně", "Podlahové topení", "Wi-Fi & TV", "Parkování"].map((feature, index) => <div key={index} className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                   <span className="text-sm text-foreground">{feature}</span>
                 </div>)}
