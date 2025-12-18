@@ -1,13 +1,48 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import IntroductionSection from "@/components/IntroductionSection";
+import HighlightsSection from "@/components/HighlightsSection";
+import GallerySection from "@/components/GallerySection";
+import ApartmentDescription from "@/components/ApartmentDescription";
+import LocationSection from "@/components/LocationSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      <Helmet>
+        <title>Apartmán Bellevue Abertamy | Ubytování v Krušných horách</title>
+        <meta
+          name="description"
+          content="Moderní dvoupokojový apartmán s výhledem na Plešivec. Ideální zázemí pro letní i zimní pobyty v Krušných horách. 2 km od skiareálu, běžkařská magistrála u domu."
+        />
+        <meta
+          name="keywords"
+          content="apartmán, ubytování, Krušné hory, Abertamy, Plešivec, lyžování, běžky, dovolená, pronájem"
+        />
+        <meta property="og:title" content="Apartmán Bellevue Abertamy | Ubytování v Krušných horách" />
+        <meta
+          property="og:description"
+          content="Moderní dvoupokojový apartmán s výhledem na Plešivec. Ideální zázemí pro letní i zimní pobyty v Krušných horách."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://bellevue-abertamy.cz" />
+      </Helmet>
+
+      <main>
+        <Navigation />
+        <HeroSection />
+        <IntroductionSection />
+        <HighlightsSection />
+        <GallerySection />
+        <ApartmentDescription />
+        <LocationSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </>
   );
 };
 
