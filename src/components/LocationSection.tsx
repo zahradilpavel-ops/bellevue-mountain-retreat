@@ -1,8 +1,10 @@
 import { Snowflake, Sun, MapPin } from "lucide-react";
-import landscapeSummer from "@/assets/landscape-summer.jpg";
-import landscapeWinter from "@/assets/landscape-winter.jpg";
+import abertamyWinter from "@/assets/abertamy-winter.jpg";
+import okoli2 from "@/assets/okoli-2.jpg";
+
 const LocationSection = () => {
-  return <section id="lokalita" className="py-20 lg:py-28 bg-background">
+  return (
+    <section id="lokalita" className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4">
@@ -19,7 +21,11 @@ const LocationSection = () => {
           {/* Winter */}
           <div className="group relative rounded-2xl overflow-hidden shadow-medium">
             <div className="aspect-[16/10]">
-              <img alt="Zimní aktivity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="/lovable-uploads/a12a79d3-07e8-4b3d-9552-b72022230163.jpg" />
+              <img
+                src={abertamyWinter}
+                alt="Zimní aktivity"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
@@ -37,7 +43,11 @@ const LocationSection = () => {
           {/* Summer */}
           <div className="group relative rounded-2xl overflow-hidden shadow-medium">
             <div className="aspect-[16/10]">
-              <img src={landscapeSummer} alt="Letní aktivity" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img
+                src={okoli2}
+                alt="Letní aktivity"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
@@ -60,27 +70,27 @@ const LocationSection = () => {
             <span className="font-serif text-xl font-medium text-foreground">Vzdálenosti</span>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[{
-            place: "Skiareál Plešivec",
-            distance: "2 km"
-          }, {
-            place: "Klínovec",
-            distance: "15 min"
-          }, {
-            place: "Lázně Jáchymov",
-            distance: "15 min"
-          }, {
-            place: "Karlovy Vary",
-            distance: "30 min"
-          }].map((item, index) => <div key={index} className="text-center p-4 rounded-xl bg-card border border-border/50">
+            {[
+              { place: "Skiareál Plešivec", distance: "2 km" },
+              { place: "Klínovec", distance: "15 min" },
+              { place: "Lázně Jáchymov", distance: "15 min" },
+              { place: "Karlovy Vary", distance: "30 min" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="text-center p-4 rounded-xl bg-card border border-border/50"
+              >
                 <div className="font-serif text-2xl font-semibold text-primary mb-1">
                   {item.distance}
                 </div>
                 <div className="text-sm text-muted-foreground">{item.place}</div>
-              </div>)}
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default LocationSection;

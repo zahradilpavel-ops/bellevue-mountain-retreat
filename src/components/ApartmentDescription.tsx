@@ -1,12 +1,18 @@
-import interiorLiving from "@/assets/interior-living.jpg";
+import bellevue1 from "@/assets/bellevue-1.jpg";
+
 const ApartmentDescription = () => {
-  return <section id="apartman" className="py-20 lg:py-28 bg-card">
+  return (
+    <section id="apartman" className="py-20 lg:py-28 bg-card">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Image */}
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
-              <img alt="Interiér apartmánu" className="w-full h-full object-cover" src="/lovable-uploads/1c99deac-6567-41b3-9bc4-80b036cc2ad2.jpg" />
+              <img
+                src={bellevue1}
+                alt="Interiér apartmánu"
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
@@ -19,7 +25,13 @@ const ApartmentDescription = () => {
             </h2>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>Nový, moderně vybavený, dvoupokojový apartmán ve druhém patře novostavby s vlastním parkováním byl navržen s důrazem na jednoduchý moderní styl, funkčnost a maximální pohodlí. Nabízí klidné prostředí pro odpočinek po dni stráveném na horách, dostatek prostoru pro rodinu i příjemné posezení na soukromé terase.</p>
+              <p>
+                Nový, moderně vybavený, dvoupokojový apartmán ve druhém patře novostavby 
+                s vlastním parkováním byl navržen s důrazem na jednoduchý moderní styl, 
+                funkčnost a maximální pohodlí. Nabízí klidné prostředí pro odpočinek po 
+                dni stráveném na horách, dostatek prostoru pro rodinu i příjemné posezení 
+                na soukromé terase.
+              </p>
               <p>
                 Apartmán je plně vybaven pro pohodlný pobyt v každém ročním období. 
                 Moderní kuchyně disponuje troubou, indukční varnou deskou, mikrovlnnou 
@@ -35,14 +47,25 @@ const ApartmentDescription = () => {
 
             {/* Features list */}
             <div className="mt-8 grid grid-cols-2 gap-3">
-              {["1 ložnice", "Soukromá terasa", "Plně vybavená kuchyně", "Podlahové topení", "Wi-Fi & TV", "Parkování"].map((feature, index) => <div key={index} className="flex items-center gap-2">
+              {[
+                "1 ložnice",
+                "Soukromá terasa",
+                "Plně vybavená kuchyně",
+                "Podlahové topení",
+                "Wi-Fi & TV",
+                "Parkování",
+              ].map((feature, index) => (
+                <div key={index} className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                   <span className="text-sm text-foreground">{feature}</span>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ApartmentDescription;
