@@ -1,18 +1,30 @@
 import { useState } from "react";
-import interiorLiving from "@/assets/interior-living.jpg";
-import interiorKitchen from "@/assets/interior-kitchen.jpg";
-import interiorBedroom from "@/assets/interior-bedroom.jpg";
-import landscapeSummer from "@/assets/landscape-summer.jpg";
-import landscapeWinter from "@/assets/landscape-winter.jpg";
-import heroWinter from "@/assets/hero-winter.jpg";
+import bellevue1 from "@/assets/bellevue-1.jpg";
+import bellevue5 from "@/assets/bellevue-5.jpg";
+import bellevue3 from "@/assets/bellevue-3.jpg";
+import bellevueKoupelna2 from "@/assets/bellevue-koupelna-2.jpg";
+import abertamyWinter from "@/assets/abertamy-winter.jpg";
+import abertamySummer from "@/assets/abertamy-summer.jpg";
+import okoli2 from "@/assets/okoli-2.jpg";
+import okoli1 from "@/assets/okoli-1.jpg";
+import okoli5 from "@/assets/okoli-5.jpg";
+import okoli6 from "@/assets/okoli-6.jpg";
+import abertamyParking from "@/assets/abertamy-parking.jpg";
+import abertamySklep from "@/assets/abertamy-sklep.jpg";
 
 const images = [
-  { src: interiorLiving, alt: "Obývací pokoj", category: "Interiér" },
-  { src: interiorKitchen, alt: "Kuchyně", category: "Interiér" },
-  { src: interiorBedroom, alt: "Ložnice", category: "Interiér" },
-  { src: heroWinter, alt: "Exteriér budovy v zimě", category: "Exteriér" },
-  { src: landscapeSummer, alt: "Krušné hory v létě", category: "Okolí" },
-  { src: landscapeWinter, alt: "Běžkařská trasa", category: "Okolí" },
+  { src: bellevue1, alt: "Obývací pokoj", category: "Interiér" },
+  { src: bellevue5, alt: "Kuchyně", category: "Interiér" },
+  { src: bellevue3, alt: "Ložnice", category: "Interiér" },
+  { src: bellevueKoupelna2, alt: "Koupelna", category: "Interiér" },
+  { src: abertamyWinter, alt: "Budova v zimě", category: "Exteriér" },
+  { src: abertamySummer, alt: "Budova v létě", category: "Exteriér" },
+  { src: okoli2, alt: "Nad mraky", category: "Okolí" },
+  { src: okoli1, alt: "Podzimní výhled", category: "Okolí" },
+  { src: okoli5, alt: "Lesní jezírko", category: "Okolí" },
+  { src: okoli6, alt: "Svítání v horách", category: "Okolí" },
+  { src: abertamyParking, alt: "Parkování", category: "Vybavení" },
+  { src: abertamySklep, alt: "Sklep na kola", category: "Vybavení" },
 ];
 
 const GallerySection = () => {

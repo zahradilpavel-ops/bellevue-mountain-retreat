@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-winter.jpg";
+import heroImage from "@/assets/abertamy-winter.jpg";
 
 const HeroSection = () => {
   return (
