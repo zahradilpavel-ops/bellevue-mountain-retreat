@@ -42,25 +42,13 @@
 }
 
 /* ===== ReservationEmbedded iframe styling ===== */
-#reservation iframe {
-  width: 100%;
-  border: none;
-}
+import ReservationEmbedded from "./components/ReservationEmbedded";
 
-/* Odstupy mezi jednotlivými iframe */
-#reservation > div {
-  margin-bottom: 2rem;
-}
-
-/* Responzivní výška iframe pro mobilní zařízení */
-@media (max-width: 768px) {
-  #reservation iframe {
-    height: 1200px; /* můžeš upravit podle potřeby */
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1280px) {
-  #reservation iframe {
-    height: 1000px; /* tablet / menší desktop */
-  }
+function App() {
+  return (
+    <div id="root">
+      {/* ostatní sekce */}
+      <ReservationEmbedded />
+    </div>
+  );
 }
