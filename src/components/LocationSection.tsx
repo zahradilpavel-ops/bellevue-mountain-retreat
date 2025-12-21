@@ -71,7 +71,7 @@ const LocationSection = () => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { place: "Skiareál Plešivec", distance: "2 km" },
+              { place: "Skiareál Plešivec", distance: "2 min" },
               { place: "Klínovec", distance: "15 min" },
               { place: "Lázně Jáchymov", distance: "15 min" },
               { place: "Karlovy Vary", distance: "30 min" },
