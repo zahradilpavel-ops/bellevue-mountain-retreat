@@ -1,3 +1,4 @@
+/* ===== Root container ===== */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,6 +6,7 @@
   text-align: center;
 }
 
+/* ===== Logo styling ===== */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -18,6 +20,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* ===== Logo spin animation ===== */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -26,31 +29,56 @@
     transform: rotate(360deg);
   }
 }
-
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
 
+/* ===== Card styling ===== */
 .card {
   padding: 2em;
 }
 
+/* ===== Read-the-docs link ===== */
 .read-the-docs {
   color: #888;
 }
 
-/* ===== ReservationEmbedded iframe styling ===== */
-import ReservationEmbedded from "./components/ReservationEmbedded";
-
-function App() {
-  return (
-    <div id="root">
-      {/* ostatní sekce */}
-      <ReservationEmbedded />
-    </div>
-  );
+/* ===== ReservationEmbedded section styling ===== */
+#reservation {
+  margin-top: 3rem;
+  text-align: center;
 }
 
-export default App;
+#reservation h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#reservation > div {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem; /* mezera mezi iframe */
+}
+
+#reservation iframe {
+  width: 100%;
+  border: none;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== Responzivní výška iframe ===== */
+@media (max-width: 768px) {
+  #reservation iframe {
+    height: 1200px; /* mobil */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  #reservation iframe {
+    height: 1000px; /* tablet / menší desktop */
+  }
+}
