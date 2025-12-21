@@ -20,19 +20,14 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick info */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12 text-primary-foreground/70">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4" />
-              <span className="text-sm">Abertamy, Krušné hory</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail className="w-4 h-4" />
-              <a href="mailto:info@bellevue-abertamy.cz" className="text-sm hover:text-primary-foreground transition-colors">
-                info@bellevue-abertamy.cz
-              </a>
-            </div>
+        {/* Quick info */}
+         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12 text-primary-foreground/70">
+           <div className="flex items-center gap-2">
+             <MapPin className="w-4 h-4" />
+           <span className="text-sm">Pražská 515, Abertamy, Krušné hory</span>
           </div>
+      {/* E-mail odstraněn */}
+     </div>
 
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
