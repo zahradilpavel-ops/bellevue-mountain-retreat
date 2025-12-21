@@ -5,7 +5,7 @@ const ReservationEmbedded = () => {
     // Dynamické načtení Previo scriptu
     const script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://booking.previo.cz/…pt"; // přesně podle kódu od partnera
+    script.src = "https://booking.previo.cz/iframe/";
     script.async = true;
     document.body.appendChild(script);
 
@@ -22,35 +22,10 @@ const ReservationEmbedded = () => {
       <div style={{ width: "100%", overflow: "hidden", marginBottom: "2rem" }}>
         <iframe
           title="Previo Booking System"
-          src="https://booking.previo.cz/…31" // přesně podle kódu od partnera
+          src="https://booking.previo.cz/?hotId=757641&showRoomType=926531"
           scrolling="no"
           frameBorder="0"
           width="100%"
           height="820"
           name="previo-booking-iframe"
-          id="previo-booking-iframe"
-          allowTransparency={true}
-          style={{ border: "none" }}
-        />
-      </div>
-
-      {/* Doplnkový iframe (coupon / promo) */}
-      <div style={{ width: "100%", overflow: "hidden" }}>
-        <iframe
-          title="Previo Booking System"
-          src="https://booking.previo.cz/…sh" // přesně podle kódu od partnera
-          scrolling="no"
-          frameBorder="0"
-          width="100%"
-          height="1050"
-          name="previo-booking-iframe-coupon"
-          id="previo-booking-iframe-coupon"
-          allowTransparency={true}
-          style={{ border: "none" }}
-        />
-      </div>
-    </section>
-  );
-};
-
-export default ReservationEmbedded;
+          id="
