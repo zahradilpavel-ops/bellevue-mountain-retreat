@@ -45,22 +45,24 @@ const ApartmentDescription = () => {
               </p>
             </div>
 
-            {/* Features list */}
-            <div className="mt-8 grid grid-cols-2 gap-3">
-              {[
-                "1 ložnice",
-                "Soukromá terasa",
-                "Plně vybavená kuchyně",
-                "Podlahové topení",
-                "Wi-Fi & TV",
-                "Parkování",
-              ].map((feature, index) => (
-                <div key={index} className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-primary" />
-                  <span className="text-sm text-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
+           {/* Features list */}
+<div className="mt-8 grid grid-cols-2 gap-4">
+  {[
+    { text: "1 ložnice", icon: <Check className="w-4 h-4" /> },
+    { text: "Soukromá terasa", icon: <Check className="w-4 h-4" /> },
+    { text: "Plně vybavená kuchyně", icon: <Check className="w-4 h-4" /> },
+    { text: "Podlahové topení", icon: <Check className="w-4 h-4" /> },
+    { text: "Wi-Fi & TV", icon: <Check className="w-4 h-4" /> },
+    { text: "Parkování", icon: <Check className="w-4 h-4" /> },
+  ].map((feature, index) => (
+    <div key={index} className="flex items-center gap-3 group">
+      <div className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+        {feature.icon}
+      </div>
+      <span className="text-sm font-medium text-foreground/90">{feature.text}</span>
+    </div>
+  ))}
+</div>
           </div>
         </div>
       </div>
