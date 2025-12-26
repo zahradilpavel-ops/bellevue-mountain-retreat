@@ -1,55 +1,48 @@
 import { useEffect } from "react";
 
-const ReservationEmbedded = () => {
+const PrevioBooking = () => {
   useEffect(() => {
+    // Toto dynamicky načte skript od Previa při startu stránky
     const script = document.createElement("script");
-    script.src = "https://booking.previo.cz/iframe/";
+    script.src = "https://booking.previo.cz/iframe/v2/previo-booking.js"; // doplň přesnou URL od partnera
     script.async = true;
     document.body.appendChild(script);
 
     return () => {
-      const existingScript = document.querySelector(
-        'script[src="https://booking.previo.cz/iframe/"]'
-      );
-      if (existingScript) {
-        existingScript.remove();
-      }
+      // Úklid při opuštění stránky
+      document.body.removeChild(script);
     };
   }, []);
 
   return (
-    <section id="reservation" style={{ marginTop: "3rem" }}>
-      <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>
-        Rezervace
-      </h2>
-
-      {/* Hlavní iframe */}
+    <div className="w-full">
+      {/* První iframe - Hlavní rezervace */}
       <iframe
-        src="https://booking.previo.cz/?hotId=757641&showRoomType=926531&lang=cs"
+        title="Previo Booking System"
+        src="https://booking.previo.cz/..." // sem vlož celou tu dlouhou URL od partnera
+        scrolling="no"
+        frameBorder="0"
         width="100%"
         height="820"
-        scrolling="no"
-        title="Previo Booking"
-        style={{
-          border: "none",
-          display: "block",
-          margin: "0 auto",
-          maxWidth: "100%",
-        }}
+        name="previo-booking-iframe"
+        id="previo-booking-iframe"
+        allowTransparency={true}
       />
-
-      {/* Kupony – až PO potvrzení, že funguje hlavní iframe */}
-      {/* 
+      
+      {/* Druhý iframe - Kupóny (pokud je chceš) */}
       <iframe
-        src="https://booking.previo.cz/?hotId=757641&showTabs=coupon&couponType=cash&lang=cs"
+        title="Previo Booking System"
+        src="https://booking.previo.cz/...sh" // sem vlož tu druhou URL od partnera
+        scrolling="no"
+        frameBorder="0"
         width="100%"
         height="1050"
-        scrolling="no"
-        title="Previo Coupon"
+        name="previo-booking-iframe-coupon"
+        id="previo-booking-iframe-coupon"
+        allowTransparency={true}
       />
-      */}
-    </section>
+    </div>
   );
 };
 
-export default ReservationEmbedded;
+export default PrevioBooking;
