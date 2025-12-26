@@ -1,42 +1,47 @@
 import { useEffect } from "react";
 
-const ReservationEmbedded = () => {
+const ReservationSection = () => {
   useEffect(() => {
-    // Definujeme konfiguraci pro Previo skript
-    window.previo_hotId = 766731;
-    window.previo_lang = 'cs';
-    window.previo_width = '100%';
-
+    // 1. Změna: Skript musí končit lomítkem, aby ho Previo správně inicializovalo
     const script = document.createElement("script");
-    script.src = "https://booking.previo.cz/iframe/v2/previo-booking.js";
+    script.src = "https://booking.previo.cz/iframe/";
     script.type = "text/javascript";
     script.async = true;
     document.body.appendChild(script);
 
     return () => {
-      // Při odchodu ze stránky skript uklidíme
-      const oldScript = document.querySelector('script[src*="previo-booking.js"]');
-      if (oldScript) oldScript.remove();
+      const existingScript = document.querySelector('script[src="https://booking.previo.cz/iframe/"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
     };
   }, []);
 
   return (
-    <div className="w-full min-h-[850px] bg-white rounded-lg overflow-hidden">
-      {/* Tento div s ID "previo-booking-iframe" je to, co skript hledá.
-          Skript do něj sám vloží správné okno.
-      */}
-      <div id="previo-booking-iframe"></div>
-    </div>
+    <section id="reservation" className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        {/* ... tvůj textový obsah ... */}
+
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-card border border-border rounded-2xl p-4 md:p-6 shadow-xl">
+            <iframe
+              title="Previo Booking System"
+              /* 2. Změna: URL musí směřovat na základní adresu s hotId */
+              src="https://booking.previo.cz/?hotId=766731&lang=cs"
+              scrolling="no"
+              frameBorder="0"
+              width="100%"
+              height="820"
+              name="previo-booking-iframe"
+              id="previo-booking-iframe"
+              allowTransparency={true}
+              className="rounded-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-// Toto je nutné, aby TypeScript nehlásil chybu u window.previo_...
-declare global {
-  interface Window {
-    previo_hotId: number;
-    previo_lang: string;
-    previo_width: string;
-  }
-}
-
-export default ReservationEmbedded;
+export default ReservationSection;
