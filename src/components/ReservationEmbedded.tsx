@@ -23,7 +23,7 @@ const ReservationEmbedded = () => {
       <div className="previo-iframe-container">
         <iframe
           title="Previo Booking System"
-          src="https://booking.previo.cz/iframe/v2/?hotId=766731"
+          src="https://booking.previo.cz/?hotId=766731&lang=cs"
           scrolling="no"
           frameBorder="0"
           width="100%"
@@ -39,7 +39,7 @@ const ReservationEmbedded = () => {
       <div className="previo-coupon-container">
         <iframe
           title="Previo Booking System"
-          src="https://booking.previo.cz/iframe/v2/?hotId=766731&hash=flash"
+          src="https://booking.previo.cz/?hotId=766731&lang=cs&hash=flash"
           scrolling="no"
           frameBorder="0"
           width="100%"
