@@ -1,4 +1,4 @@
-import bellevue1 from "@/assets/bellevue-1.jpg";
+import { Bed, Trees, ChefHat, Thermometer, Wifi, Car } from "lucide-react";
 
 const ApartmentDescription = () => {
   return (
@@ -45,21 +45,26 @@ const ApartmentDescription = () => {
               </p>
             </div>
 
-           {/* Features list */}
-<div className="mt-8 grid grid-cols-2 gap-4">
+          {/* Features list */}
+<div className="mt-8 grid grid-cols-2 gap-3">
   {[
-    { text: "1 ložnice", icon: <Check className="w-4 h-4" /> },
-    { text: "Soukromá terasa", icon: <Check className="w-4 h-4" /> },
-    { text: "Plně vybavená kuchyně", icon: <Check className="w-4 h-4" /> },
-    { text: "Podlahové topení", icon: <Check className="w-4 h-4" /> },
-    { text: "Wi-Fi & TV", icon: <Check className="w-4 h-4" /> },
-    { text: "Parkování", icon: <Check className="w-4 h-4" /> },
+    { text: "1 ložnice", icon: <Bed className="w-4 h-4" /> },
+    { text: "Soukromá terasa", icon: <Trees className="w-4 h-4" /> },
+    { text: "Plně vybavená kuchyně", icon: <ChefHat className="w-4 h-4" /> },
+    { text: "Podlahové topení", icon: <Thermometer className="w-4 h-4" /> },
+    { text: "Wi-Fi & TV", icon: <Wifi className="w-4 h-4" /> },
+    { text: "Parkování", icon: <Car className="w-4 h-4" /> },
   ].map((feature, index) => (
-    <div key={index} className="flex items-center gap-3 group">
-      <div className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+    <div 
+      key={index} 
+      className="flex items-center gap-3 p-3 rounded-xl border border-border bg-card/50 hover:bg-white hover:shadow-md transition-all duration-300"
+    >
+      <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary shrink-0">
         {feature.icon}
       </div>
-      <span className="text-sm font-medium text-foreground/90">{feature.text}</span>
+      <span className="text-sm font-medium text-foreground tracking-tight">
+        {feature.text}
+      </span>
     </div>
   ))}
 </div>
