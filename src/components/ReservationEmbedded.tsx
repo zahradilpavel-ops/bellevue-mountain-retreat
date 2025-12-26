@@ -24,7 +24,7 @@ const ReservationEmbedded = () => {
     <section id="reservation">
       <iframe
         title="Previo Booking System"
-        src="https://booking.previo.cz/?hotId=757641&showRoomType=926531&lang=cs"
+        src="https://booking.previo.cz/?hotId=757641&showRoomType=952287&lang=cs"
         id="previo-booking-iframe"
         name="previo-booking-iframe"
         width="100%"
@@ -37,3 +37,4 @@ const ReservationEmbedded = () => {
 };
 
 export default ReservationEmbedded;
+
