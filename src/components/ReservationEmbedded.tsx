@@ -1,19 +1,27 @@
-"use client";
-
-import Script from "next/script";
+import { useEffect } from "react";
 
 const ReservationEmbedded = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://booking.previo.cz/iframe/";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      const existingScript = document.querySelector(
+        'script[src="https://booking.previo.cz/iframe/"]'
+      );
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return (
     <section id="reservation" style={{ marginTop: "3rem" }}>
       <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>
         Rezervace
       </h2>
-
-      {/* Previo script – stejně jako v HTML */}
-      <Script
-        src="https://booking.previo.cz/iframe/"
-        strategy="beforeInteractive"
-      />
 
       {/* Hlavní iframe */}
       <iframe
@@ -21,7 +29,6 @@ const ReservationEmbedded = () => {
         width="100%"
         height="820"
         scrolling="no"
-        allowTransparency
         title="Previo Booking"
         style={{
           border: "none",
@@ -38,7 +45,6 @@ const ReservationEmbedded = () => {
         width="100%"
         height="1050"
         scrolling="no"
-        allowTransparency
         title="Previo Coupon"
       />
       */}
