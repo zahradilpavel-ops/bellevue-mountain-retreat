@@ -2,30 +2,30 @@ import { Snowflake, Sun, MapPin, Utensils, Coffee, ShoppingBag, Map as MapIcon }
 import abertamyWinter from "@/assets/abertamy-winter.jpg";
 import okoli2 from "@/assets/okoli-2.jpg";
 
-const LocationSection = () => {
+const LocationSectionEN = () => {
   const nearbyPlaces = [
     { 
       name: "nejencafé.", 
-      dist: "4 min chůze", 
-      desc: "Špičková káva, domácí dezerty a moderní bistro.", 
+      dist: "4 min walk", 
+      desc: "Premium coffee, homemade desserts, and a modern bistro atmosphere.", 
       icon: <Coffee className="w-4 h-4" /> 
     },
     { 
-      name: "Horský statek Abertamy", 
-      dist: "5 min chůze", 
-      desc: "Prodejna vyhlášených sýrů a lokálního bio hovězího.", 
+      name: "Abertamy Mountain Farm", 
+      dist: "5 min walk", 
+      desc: "Famous local cheese shop and organic beef from the Ore Mountains.", 
       icon: <ShoppingBag className="w-4 h-4" /> 
     },
     { 
-      name: "Bistro s řeznictvím", 
-      dist: "5 min chůze", 
-      desc: "Poctivé masné výrobky a teplá jídla z vlastního chovu.", 
+      name: "Butcher's Bistro", 
+      dist: "5 min walk", 
+      desc: "Quality meat products and hot meals from their own local breeding.", 
       icon: <Utensils className="w-4 h-4" /> 
     },
     { 
       name: "Bistro Andrea", 
-      dist: "8 min chůze", 
-      desc: "Tradiční česká jídla a příjemné posezení.", 
+      dist: "8 min walk", 
+      desc: "Traditional Czech cuisine and a pleasant seating area.", 
       icon: <Utensils className="w-4 h-4" /> 
     }
   ];
@@ -34,15 +34,15 @@ const LocationSection = () => {
   const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2524.4446487196016!2d12.818826777123957!3d50.37053599298811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0bdaf2bfbc383%3A0x72f5860ba3e4b41b!2zUHJhowZza8OhIDUxNSwgMzYyIDM1IEFiZXJ0YW15!5e0!3m2!1scs!2scz!4v1710000000000!5m2!1scs!2scz";
 
   return (
-    <section id="lokalita" className="py-20 lg:py-28 bg-background">
+    <section id="location" className="py-20 lg:py-28 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4">
-            Poloha a aktivity
+            Location & Activities
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Abertamy se nachází v klidné části Krušných hor a nabízí ideální kombinaci 
-            přírody, sportu a relaxace.
+            Abertamy is located in a peaceful part of the Ore Mountains and offers the 
+            ideal combination of nature, sports, and relaxation.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const LocationSection = () => {
             <div className="aspect-[16/10]">
               <img
                 src={abertamyWinter}
-                alt="Zimní aktivity"
+                alt="Winter activities"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -61,11 +61,11 @@ const LocationSection = () => {
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
               <div className="flex items-center gap-2 mb-3">
                 <Snowflake className="w-5 h-5 text-primary-foreground" />
-                <span className="text-primary-foreground font-medium">Zimní sezóna</span>
+                <span className="text-primary-foreground font-medium">Winter Season</span>
               </div>
               <p className="text-primary-foreground/90 text-sm leading-relaxed">
-                Lyžařské areály Plešivec a Klínovec na dosah. Běžkařská magistrála 
-                přímo u apartmánu. Sněžná pohádka pro celou rodinu.
+                Plešivec and Klínovec ski resorts within easy reach. Cross-country 
+                skiing arterial track right by the apartment. A winter wonderland for the whole family.
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ const LocationSection = () => {
             <div className="aspect-[16/10]">
               <img
                 src={okoli2}
-                alt="Letní aktivity"
+                alt="Summer activities"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
@@ -83,11 +83,11 @@ const LocationSection = () => {
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
               <div className="flex items-center gap-2 mb-3">
                 <Sun className="w-5 h-5 text-primary-foreground" />
-                <span className="text-primary-foreground font-medium">Letní sezóna</span>
+                <span className="text-primary-foreground font-medium">Summer Season</span>
               </div>
               <p className="text-primary-foreground/90 text-sm leading-relaxed">
-                Husté sítě turistických a cyklistických tras. Krásná příroda 
-                Krušných hor pro pěší výlety i horská kola.
+                Extensive network of hiking and cycling trails. The beautiful 
+                nature of the Ore Mountains for hiking and mountain biking trips.
               </p>
             </div>
           </div>
@@ -97,14 +97,14 @@ const LocationSection = () => {
         <div className="max-w-4xl mx-auto mb-20">
           <div className="flex items-center justify-center gap-2 mb-8">
             <MapPin className="w-5 h-5 text-primary" />
-            <span className="font-serif text-xl font-medium text-foreground">Vzdálenosti</span>
+            <span className="font-serif text-xl font-medium text-foreground">Distances</span>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { place: "Skiareál Plešivec", distance: "2 min" },
+              { place: "Plešivec Ski Resort", distance: "2 min" },
               { place: "Klínovec", distance: "15 min" },
-              { place: "Lázně Jáchymov", distance: "15 min" },
-              { place: "Karlovy Vary", distance: "30 min" },
+              { place: "Jáchymov Spa", distance: "15 min" },
+              { place: "Karlsbad", distance: "30 min" },
             ].map((item, index) => (
               <div
                 key={index}
@@ -126,7 +126,7 @@ const LocationSection = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-2">
                 <MapIcon className="w-5 h-5 text-primary" />
-                <h3 className="font-serif text-2xl font-medium">Kde nás najdete</h3>
+                <h3 className="font-serif text-2xl font-medium">Where to find us</h3>
               </div>
               <div className="w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border border-border">
                 <iframe
@@ -137,12 +137,12 @@ const LocationSection = () => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Mapa - Apartmán Bellevue Abertamy"
+                  title="Map - Apartment Bellevue Abertamy"
                 ></iframe>
               </div>
               <p className="text-muted-foreground flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-primary" />
-                Pražská 515, 362 35 Abertamy
+                Pražská 515, 362 35 Abertamy, Czech Republic
               </p>
             </div>
 
@@ -150,7 +150,7 @@ const LocationSection = () => {
             <div className="space-y-6">
               <div className="flex items-center gap-2">
                 <Utensils className="w-5 h-5 text-primary" />
-                <h3 className="font-serif text-2xl font-medium">Tipy v okolí</h3>
+                <h3 className="font-serif text-2xl font-medium">Nearby Tips</h3>
               </div>
               <div className="grid gap-4">
                 {nearbyPlaces.map((place, i) => (
@@ -183,4 +183,4 @@ const LocationSection = () => {
   );
 };
 
-export default LocationSection;
+export default LocationSectionEN;
