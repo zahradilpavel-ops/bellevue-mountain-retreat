@@ -18,7 +18,7 @@ const Navigation = () => {
     { label: "Apartmán", href: "#apartman" },
     { label: "Galerie", href: "#galerie" },
     { label: "Lokalita", href: "#lokalita" },
-    { label: "Rezervace", href: "#rezervace" }, // Přidán tento řádek
+    { label: "Rezervace", href: "#kontakt" },
   ];
 
   return (
@@ -60,6 +60,19 @@ const Navigation = () => {
                 {link.label}
               </a>
             ))}
+
+            {/* Language Switcher Desktop */}
+            <div className="flex items-center ml-2 border-l border-white/20 pl-6">
+              <a 
+                href="/en" 
+                className={`text-xs font-bold tracking-widest hover:text-primary transition-colors ${
+                  isScrolled ? "text-foreground/60" : "text-primary-foreground/80"
+                }`}
+              >
+                EN
+              </a>
+            </div>
+
             <Button
               variant={isScrolled ? "default" : "heroOutline"}
               size="sm"
@@ -99,6 +112,18 @@ const Navigation = () => {
                   {link.label}
                 </a>
               ))}
+              
+              {/* Language Switcher Mobile */}
+              <a
+                href="/en"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`text-base font-bold py-2 ${
+                  isScrolled ? "text-foreground" : "text-primary-foreground"
+                }`}
+              >
+                English (EN)
+              </a>
+
               <Button variant="default" size="sm" asChild>
                 <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
                   Rezervace
