@@ -7,6 +7,7 @@ import GallerySection from "@/components/GallerySection";
 import ApartmentDescription from "@/components/ApartmentDescription";
 import LocationSection from "@/components/LocationSection";
 import ContactSection from "@/components/ContactSection";
+import ReservationEmbedded from "@/components/ReservationEmbedded";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -31,7 +32,7 @@ const Index = () => {
         <link rel="canonical" href="https://bellevue-abertamy.cz" />
       </Helmet>
 
-      <main>
+     <main>
         <Navigation />
         <HeroSection />
         <IntroductionSection />
@@ -39,6 +40,10 @@ const Index = () => {
         <GallerySection />
         <ApartmentDescription />
         <LocationSection />
+        {/* SEM VLOŽÍME REZERVACI */}
+        <section id="rezervace" className="py-20 bg-slate-50">
+           <ReservationEmbedded />
+        </section>
         <ContactSection />
         <Footer />
       </main>
