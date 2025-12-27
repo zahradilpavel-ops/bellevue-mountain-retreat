@@ -1,9 +1,9 @@
 import { Bed, Trees, ChefHat, Thermometer, Wifi, Car } from "lucide-react";
 import bellevue1 from "@/assets/bellevue-1.jpg";
 
-const ApartmentDescription = () => {
+const ApartmentDescriptionEN = () => {
   return (
-    <section id="apartman" className="py-20 lg:py-28 bg-card">
+    <section id="apartment" className="py-20 lg:py-28 bg-card">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Image */}
@@ -11,7 +11,7 @@ const ApartmentDescription = () => {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
               <img
                 src={bellevue1}
-                alt="Interiér apartmánu"
+                alt="Apartment Interior"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -22,53 +22,53 @@ const ApartmentDescription = () => {
           {/* Content */}
           <div>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-6">
-              Užijte si hory bez kompromisů
+              Mountain living without compromise
             </h2>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Nový, moderně vybavený, dvoupokojový apartmán ve druhém patře novostavby 
-                s vlastním parkováním byl navržen s důrazem na jednoduchý moderní styl, 
-                funkčnost a maximální pohodlí. Nabízí klidné prostředí pro odpočinek po 
-                dni stráveném na horách, dostatek prostoru pro rodinu i příjemné posezení 
-                na soukromé terase.
+                This brand-new, modern two-room apartment on the second floor of a newly 
+                constructed building with private parking has been designed with an emphasis 
+                on simple modern style, functionality, and maximum comfort. It offers a 
+                peaceful environment to relax after a day in the mountains, plenty of space 
+                for the family, and a pleasant seating area on a private terrace.
               </p>
               <p>
-                Apartmán je plně vybaven pro pohodlný pobyt v každém ročním období. 
-                Moderní kuchyně disponuje troubou, indukční varnou deskou, mikrovlnnou 
-                troubou, lednicí s mrazákem, myčkou nádobí, kávovarem Nespresso, mixérem 
-                a toustovačem. Součástí bytu je koupelna se sprchovým koutem a toaletou.
+                The apartment is fully equipped for a comfortable stay in any season. 
+                The modern kitchen features an oven, induction hob, microwave, 
+                fridge-freezer, dishwasher, Nespresso coffee machine, blender, and toaster. 
+                The apartment includes a bathroom with a walk-in shower and toilet.
               </p>
               <p>
-                Samozřejmostí je Wi-Fi připojení, kabelová televize a parkování přímo u objektu. 
-                Pro aktivní hosty je k dispozici vlastní sklep pro uložení dvou kol. 
-                Komfort pobytu zajišťuje také podlahové topení v celém apartmánu.
+                Standard amenities include Wi-Fi, cable TV, and parking directly at the building. 
+                For active guests, a private cellar is available for storing bikes or skis. 
+                Your comfort is further enhanced by underfloor heating throughout the entire apartment.
               </p>
             </div>
 
-          {/* Features list */}
-<div className="mt-8 grid grid-cols-2 gap-3">
-  {[
-    { text: "1 ložnice", icon: <Bed className="w-4 h-4" /> },
-    { text: "Soukromá terasa", icon: <Trees className="w-4 h-4" /> },
-    { text: "Plně vybavená kuchyně", icon: <ChefHat className="w-4 h-4" /> },
-    { text: "Podlahové topení", icon: <Thermometer className="w-4 h-4" /> },
-    { text: "Wi-Fi & TV", icon: <Wifi className="w-4 h-4" /> },
-    { text: "Parkování", icon: <Car className="w-4 h-4" /> },
-  ].map((feature, index) => (
-    <div 
-      key={index} 
-      className="flex items-center gap-3 p-3 rounded-xl border border-border bg-card/50 hover:bg-white hover:shadow-md transition-all duration-300"
-    >
-      <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary shrink-0">
-        {feature.icon}
-      </div>
-      <span className="text-sm font-medium text-foreground tracking-tight">
-        {feature.text}
-      </span>
-    </div>
-  ))}
-</div>
+            {/* Features list */}
+            <div className="mt-8 grid grid-cols-2 gap-3">
+              {[
+                { text: "1 Bedroom", icon: <Bed className="w-4 h-4" /> },
+                { text: "Private Terrace", icon: <Trees className="w-4 h-4" /> },
+                { text: "Fully Equipped Kitchen", icon: <ChefHat className="w-4 h-4" /> },
+                { text: "Underfloor Heating", icon: <Thermometer className="w-4 h-4" /> },
+                { text: "Wi-Fi & TV", icon: <Wifi className="w-4 h-4" /> },
+                { text: "On-site Parking", icon: <Car className="w-4 h-4" /> },
+              ].map((feature, index) => (
+                <div 
+                  key={index} 
+                  className="flex items-center gap-3 p-3 rounded-xl border border-border bg-card/50 hover:bg-white hover:shadow-md transition-all duration-300"
+                >
+                  <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary shrink-0">
+                    {feature.icon}
+                  </div>
+                  <span className="text-sm font-medium text-foreground tracking-tight">
+                    {feature.text}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -76,4 +76,4 @@ const ApartmentDescription = () => {
   );
 };
 
-export default ApartmentDescription;
+export default ApartmentDescriptionEN;
