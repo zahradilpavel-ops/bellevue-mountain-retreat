@@ -3,46 +3,46 @@ import { Wifi, Car, Coffee, Sun, Bath, Bike } from "lucide-react";
 const highlights = [
   {
     icon: Coffee,
-    title: "Plně vybavená kuchyně",
-    description: "Trouba, indukční varná deska, myčka a kávovar Nespresso",
+    title: "Fully Equipped Kitchen",
+    description: "Oven, induction hob, dishwasher, and Nespresso coffee machine",
   },
   {
     icon: Wifi,
-    title: "Vysokorychlostní Wi-Fi",
-    description: "Kabelová televize pro pohodlné večery",
+    title: "High-Speed Wi-Fi",
+    description: "Cable TV included for cozy evenings",
   },
   {
     icon: Car,
-    title: "Parkování zdarma",
-    description: "Vlastní parkovací místo přímo u objektu",
+    title: "Free Parking",
+    description: "Private parking space directly at the building",
   },
   {
     icon: Sun,
-    title: "Soukromá terasa",
-    description: "Pro relaxaci pod širým nebem",
+    title: "Private Terrace",
+    description: "For outdoor relaxation under the open sky",
   },
   {
     icon: Bath,
-    title: "Moderní koupelna",
-    description: "Se sprchovým koutem a podlahovým topením",
+    title: "Modern Bathroom",
+    description: "With walk-in shower and underfloor heating",
   },
   {
     icon: Bike,
-    title: "Úschovna kol",
-    description: "Vlastní sklep pro 2 kola",
+    title: "Storage Room",
+    description: "Private cellar for bikes or ski equipment",
   },
 ];
 
-const HighlightsSection = () => {
+const HighlightsSectionEN = () => {
   return (
     <section className="py-20 lg:py-28 bg-card">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4">
-            Co vás u nás čeká
+            Everything for your comfort
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Vše potřebné pro komfortní pobyt na jednom místě
+            All the essentials for a perfect stay in one place
           </p>
         </div>
 
@@ -71,4 +71,4 @@ const HighlightsSection = () => {
   );
 };
 
-export default HighlightsSection;
+export default HighlightsSectionEN;
