@@ -1,4 +1,5 @@
 import { Bed, Trees, ChefHat, Thermometer, Wifi, Car } from "lucide-react";
+import bellevue1 from "@/assets/bellevue-1.jpg";
 
 const ApartmentDescription = () => {
   return (
