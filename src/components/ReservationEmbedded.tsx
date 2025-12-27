@@ -1,36 +1,43 @@
+import React from "react";
+
 const ReservationEmbedded = () => {
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-8">
-      {/* Box pro hlavní rezervaci */}
-      <div className="flex flex-col items-center justify-center p-12 bg-white rounded-2xl border border-border shadow-xl text-center">
-        <div className="mb-6">
-          <h3 className="text-2xl font-bold text-foreground mb-2">Rezervace apartmánu</h3>
-          <p className="text-muted-foreground">
-            Pro zobrazení aktuálních termínů a cen pokračujte do našeho zabezpečeného systému.
+    <div className="w-full max-w-5xl mx-auto px-4">
+      <div className="bg-white rounded-2xl border border-border shadow-2xl overflow-hidden">
+        {/* Horní lišta boxu */}
+        <div className="p-6 border-b border-border bg-slate-50 text-center">
+          <h3 className="text-2xl font-bold text-slate-800">Rezervace pobytu</h3>
+          <p className="text-muted-foreground mt-2">
+            Vyberte si termín přímo v našem kalendáři
           </p>
         </div>
         
-        <a 
-          href="https://booking.previo.cz/?hotId=757641&showRoomType=926531&lang=cs" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full hover:opacity-90 transition-all shadow-lg hover:shadow-xl"
-        >
-          Otevřít rezervační formulář
-        </a>
-      </div>
+        {/* Kontejner pro Iframe Previa */}
+        <div className="relative w-full h-[700px] md:h-[800px] bg-white">
+          <iframe 
+            src="https://booking.previo.cz/?hotId=757641&showRoomType=926531&lang=cs"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            title="Rezervační formulář Previo"
+            className="w-full h-full"
+            loading="lazy"
+            allow="payment"
+          ></iframe>
+        </div>
 
-      {/* Box pro dárkové poukazy */}
-      <div className="flex flex-col items-center justify-center p-10 bg-slate-50 rounded-2xl border border-dashed border-slate-300 text-center">
-        <h4 className="text-xl font-semibold mb-4 text-slate-800">Dárkové poukazy</h4>
-        <a 
-          href="https://booking.previo.cz/?hotId=757641&showTabs=coupon&couponType=cash&lang=cs" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-blue-600 font-medium hover:underline underline-offset-4"
-        >
-          Zakoupit dárkový poukaz online →
-        </a>
+        {/* Spodní lišta s dárkovými poukazy */}
+        <div className="p-6 bg-slate-50 border-t border-border text-center">
+          <p className="text-sm text-slate-600 mb-2">Chcete někoho potěšit dárkovým poukazem?</p>
+          <a 
+            href="https://booking.previo.cz/?hotId=757641&showTabs=coupon&couponType=cash&lang=cs" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-primary font-semibold hover:underline"
+          >
+            Koupit dárkový poukaz online →
+          </a>
+        </div>
       </div>
     </div>
   );
