@@ -40,11 +40,9 @@ const Index = () => {
         <GallerySection />
         <ApartmentDescription />
         <LocationSection />
-        {/* SEM VLOŽÍME REZERVACI */}
         <section id="rezervace" className="py-20 bg-slate-50">
            <ReservationEmbedded />
         </section>
-        <ContactSection />
         <Footer />
       </main>
     </>
