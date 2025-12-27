@@ -6,7 +6,6 @@ import HighlightsSection from "@/components/HighlightsSection";
 import GallerySection from "@/components/GallerySection";
 import ApartmentDescription from "@/components/ApartmentDescription";
 import LocationSection from "@/components/LocationSection";
-import ContactSection from "@/components/ContactSection";
 import ReservationEmbedded from "@/components/ReservationEmbedded";
 import Footer from "@/components/Footer";
 
