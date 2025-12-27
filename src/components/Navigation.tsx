@@ -19,7 +19,6 @@ const Navigation = () => {
     { label: "Galerie", href: "#galerie" },
     { label: "Lokalita", href: "#lokalita" },
     { label: "Rezervace", href: "#rezervace" }, // Přidán tento řádek
-    { label: "Kontakt", href: "#kontakt" },
   ];
 
   return (
