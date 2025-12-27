@@ -1,24 +1,26 @@
-import { Helmet } from "react-helmet-async";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import NavigationEN from "@/components/NavigationEN";
+import HeroSectionEN from "@/components/HeroSectionEN";
+import IntroductionSectionEN from "@/components/IntroductionSectionEN";
+import GallerySection from "@/components/GallerySection"; // Ta zůstala stejná
+import HighlightsSectionEN from "@/components/HighlightsSectionEN";
+import ApartmentDescriptionEN from "@/components/ApartmentDescriptionEN";
+import LocationSectionEN from "@/components/LocationSectionEN";
+import ContactSectionEN from "@/components/ContactSectionEN";
+import FooterEN from "@/components/FooterEN";
 
 const IndexEN = () => {
   return (
-    <>
-      <Helmet>
-        <title>Apartment Bellevue Abertamy | Accommodation in Ore Mountains</title>
-      </Helmet>
-
-      <main>
-        <Navigation />
-        <div className="py-20 text-center">
-          <h1 className="text-4xl font-bold">English Version Under Construction</h1>
-          <p className="mt-4 text-gray-600">This page will soon be available in English.</p>
-          <a href="/" className="mt-10 inline-block text-blue-600 underline">Back to Czech version</a>
-        </div>
-        <Footer />
-      </main>
-    </>
+    <div className="min-h-screen bg-background">
+      <NavigationEN />
+      <HeroSectionEN />
+      <IntroductionSectionEN />
+      <GallerySection />
+      <HighlightsSectionEN />
+      <ApartmentDescriptionEN />
+      <LocationSectionEN />
+      <ContactSectionEN />
+      <FooterEN />
+    </div>
   );
 };
 
