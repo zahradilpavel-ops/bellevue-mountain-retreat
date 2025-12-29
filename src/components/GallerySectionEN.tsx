@@ -38,7 +38,7 @@ const GallerySection = () => {
             Galerie
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Prohlédněte si náš apartmán a jeho okolí
+            View the apartment and location
           </p>
         </div>
 
