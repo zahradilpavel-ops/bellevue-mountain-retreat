@@ -20,7 +20,7 @@ const HeroSectionEN = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-10 leading-relaxed opacity-0 animate-fade-up animation-delay-200">
-            A brand-new, modern two-room apartment with a view of Plešivec, 
+            A brand-new, modern one-bedroom apartment with a view of Plešivec, 
             offering comfortable accommodation for both summer and winter getaways. 
             Its prime location makes it the perfect base for exploring the Ore Mountains all year round.
           </p>
