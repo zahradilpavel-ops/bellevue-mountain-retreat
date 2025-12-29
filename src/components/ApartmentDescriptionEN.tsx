@@ -27,7 +27,7 @@ const ApartmentDescriptionEN = () => {
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                This brand-new, modern two-room apartment on the second floor of a newly 
+                This brand-new, modern one-bedroom apartment on the second floor of a newly 
                 constructed building with private parking has been designed with an emphasis 
                 on simple modern style, functionality, and maximum comfort. It offers a 
                 peaceful environment to relax after a day in the mountains, plenty of space 
@@ -36,7 +36,7 @@ const ApartmentDescriptionEN = () => {
               <p>
                 The apartment is fully equipped for a comfortable stay in any season. 
                 The modern kitchen features an oven, induction hob, microwave, 
-                fridge-freezer, dishwasher, Nespresso coffee machine, blender, and toaster. 
+                fridge-freezer, dishwasher, washing machine, Nespresso coffee machine, blender, and toaster. 
                 The apartment includes a bathroom with a walk-in shower and toilet.
               </p>
               <p>
