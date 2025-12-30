@@ -31,7 +31,7 @@ const Index = () => {
         <link rel="canonical" href="https://bellevue-abertamy.cz" />
       </Helmet>
 
-     <main>
+      <main>
         <Navigation />
         <HeroSection />
         <IntroductionSection />
@@ -39,9 +39,12 @@ const Index = () => {
         <GallerySection />
         <ApartmentDescription />
         <LocationSection />
-        <section id="rezervace" className="py-20 bg-slate-50">
-           <ReservationEmbedded />
+        
+        {/* Sekce sjednocena na id="kontakt" pro funkčnost navigace */}
+        <section id="kontakt" className="py-20 bg-slate-50 scroll-mt-20">
+          <ReservationEmbedded />
         </section>
+
         <Footer />
       </main>
     </>
