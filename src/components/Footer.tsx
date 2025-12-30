@@ -35,7 +35,7 @@ const Footer = () => {
               { label: "Apartmán", href: "#apartman" },
               { label: "Galerie", href: "#galerie" },
               { label: "Lokalita", href: "#lokalita" },
-              { label: "Kontakt", href: "#kontakt" },
+              { label: "Rezervace", href: "#kontakt" },
             ].map((link) => (
               <a
                 key={link.href}
