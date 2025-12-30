@@ -1,7 +1,7 @@
 import NavigationEN from "@/components/NavigationEN";
 import HeroSectionEN from "@/components/HeroSectionEN";
 import IntroductionSectionEN from "@/components/IntroductionSectionEN";
-import GallerySection from "@/components/GallerySection"; // Ta zůstala stejná
+import GallerySection from "@/components/GallerySectionEN";
 import HighlightsSectionEN from "@/components/HighlightsSectionEN";
 import ApartmentDescriptionEN from "@/components/ApartmentDescriptionEN";
 import LocationSectionEN from "@/components/LocationSectionEN";
@@ -14,7 +14,7 @@ const IndexEN = () => {
       <NavigationEN />
       <HeroSectionEN />
       <IntroductionSectionEN />
-      <GallerySection />
+      <GallerySectionEN />
       <HighlightsSectionEN />
       <ApartmentDescriptionEN />
       <LocationSectionEN />
