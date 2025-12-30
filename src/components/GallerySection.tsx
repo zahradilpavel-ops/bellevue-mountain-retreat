@@ -24,7 +24,7 @@ const images = [
   { src: okoli5, alt: "Lesní jezírko", category: "Okolí" },
   { src: okoli6, alt: "Svítání v horách", category: "Okolí" },
   { src: abertamyParking, alt: "Parkování", category: "Vybavení" },
-  { src: abertamySklep, alt: "Sklep na kola", category: "Vybavení" },
+  { src: abertamySklep, alt: "Sdílený sklep na kola", category: "Vybavení" },
 ];
 
 const GallerySection = () => {
