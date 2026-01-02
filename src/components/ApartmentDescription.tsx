@@ -1,5 +1,4 @@
 import { Check, Square, Users, Bed, Coffee, Wifi, Tv } from "lucide-react";
-// Přidáváme import obrázku, stejně jako v ostatních funkčních sekcích
 import bellevue1 from "@/assets/bellevue-1.jpg";
 
 const features = [
@@ -39,7 +38,6 @@ const ApartmentDescription = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                {/* Změněno src z textové cesty na importovanou proměnnou */}
                 src={bellevue1} 
                 alt="Interiér apartmánu" 
                 className="w-full h-[400px] object-cover"
