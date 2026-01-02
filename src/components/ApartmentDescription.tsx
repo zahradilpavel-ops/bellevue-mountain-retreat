@@ -1,4 +1,6 @@
 import { Check, Square, Users, Bed, Coffee, Wifi, Tv } from "lucide-react";
+// Přidáváme import obrázku, stejně jako v ostatních funkčních sekcích
+import bellevue1 from "@/assets/bellevue-1.jpg";
 
 const features = [
   { icon: <Square className="w-5 h-5 text-primary" />, text: "50 m²" },
@@ -19,7 +21,7 @@ const ApartmentDescription = () => {
               Váš domov v srdci Krušných hor
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Nabízíme modrní 50 m2 apartmán, který poskytuje veškerý komfort pro vaši dovolenou. Apartmán je ideálně řešen pro 4 osoby, ať už plánujete rodinný výlet nebo aktivní dovolenou s přáteli.
+              Nabízíme moderní **50 m²** apartmán, který poskytuje veškerý komfort pro vaši dovolenou. Apartmán je ideálně řešen pro **4 osoby**, ať už plánujete rodinný výlet nebo aktivní dovolenou s přáteli.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
@@ -37,7 +39,8 @@ const ApartmentDescription = () => {
           <div className="w-full lg:w-1/2">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/images/gallery/1.jpg" 
+                {/* Změněno src z textové cesty na importovanou proměnnou */}
+                src={bellevue1} 
                 alt="Interiér apartmánu" 
                 className="w-full h-[400px] object-cover"
               />
