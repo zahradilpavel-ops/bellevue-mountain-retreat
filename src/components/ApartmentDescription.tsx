@@ -20,7 +20,7 @@ const ApartmentDescription = () => {
               Váš domov v srdci Krušných hor
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Nabízíme moderní **50 m²** apartmán, který poskytuje veškerý komfort pro vaši dovolenou. Apartmán je ideálně řešen pro **4 osoby**, ať už plánujete rodinný výlet nebo aktivní dovolenou s přáteli.
+              Nabízíme moderní 50 m² apartmán, který poskytuje veškerý komfort pro vaši dovolenou. Apartmán je ideální pro 4 osoby, ať už plánujete rodinný výlet, nebo aktivní dovolenou s přáteli.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
