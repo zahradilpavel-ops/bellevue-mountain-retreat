@@ -1,8 +1,8 @@
 import { Check, Square, Users, Bed, Coffee, Wifi, Tv } from "lucide-react";
 
 const features = [
-  { icon: <Square className="w-5 h-5 text-primary" />, text: "Plocha 50 m²" },
-  { icon: <Users className="w-5 h-5 text-primary" />, text: "Kapacita pro 4 osoby" },
+  { icon: <Square className="w-5 h-5 text-primary" />, text: "50 m²" },
+  { icon: <Users className="w-5 h-5 text-primary" />, text: "4 osoby" },
   { icon: <Bed className="w-5 h-5 text-primary" />, text: "Oddělená ložnice" },
   { icon: <Coffee className="w-5 h-5 text-primary" />, text: "Vybavená kuchyně" },
   { icon: <Wifi className="w-5 h-5 text-primary" />, text: "Wi-Fi zdarma" },
