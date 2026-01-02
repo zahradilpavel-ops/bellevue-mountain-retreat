@@ -1,0 +1,59 @@
+import { MapPin, Mountain, Users } from "lucide-react";
+
+const IntroductionSectionEN = () => {
+  return (
+    <section className="py-20 lg:py-28 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-8">
+            Your home in the heart of the Ore Mountains
+          </h2>
+          
+          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <p>
+              Apartment Bellevue Abertamy is a modern mountain retreat in the heart of the Ore Mountains, 
+              perfect for a peaceful holiday in both summer and winter. We offer comfortable 
+              accommodation with an emphasis on high-quality amenities, privacy, and excellent 
+              access to a wide range of sports and relaxation activities.
+            </p>
+            <p>
+              The apartment is located directly on the Ore Mountains cross-country skiing arterial track 
+              and just 2 km from the Plešivec ski resort. Within a 15-minute drive, you can reach 
+              the Klínovec and Boží Dar ski areas or the Jáchymov spa. A trip to the famous 
+              spa city of Karlsbad takes approximately 30 minutes.
+            </p>
+          </div>
+
+          {/* Feature badges */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div className="flex flex-col items-center p-6 rounded-xl bg-card border border-border/50 shadow-soft">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <MapPin className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-serif text-xl font-medium text-foreground mb-2">Prime Location</h3>
+              <p className="text-muted-foreground text-sm">2 km from Plešivec ski resort</p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 rounded-xl bg-card border border-border/50 shadow-soft">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Mountain className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-serif text-xl font-medium text-foreground mb-2">Year-round Stay</h3>
+              <p className="text-muted-foreground text-sm">Perfect for summer and winter</p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 rounded-xl bg-card border border-border/50 shadow-soft">
+              <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="font-serif text-xl font-medium text-foreground mb-2">Families & Couples</h3>
+              <p className="text-muted-foreground text-sm">Active travelers always welcome</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default IntroductionSectionEN;

@@ -1,6 +1,6 @@
 import { Mountain, MapPin, Phone, Mail } from "lucide-react";
 
-const Footer = () => {
+const FooterEN = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,30 +12,29 @@ const Footer = () => {
             <div className="flex items-center justify-center gap-3 mb-4">
               <Mountain className="w-8 h-8 text-primary-foreground/80" />
               <h3 className="font-serif text-2xl font-medium text-primary-foreground">
-                Apartmán Bellevue Abertamy
+                Apartment Bellevue Abertamy
               </h3>
             </div>
             <p className="text-primary-foreground/60">
-              Komfortní ubytování v srdci Krušných hor
+              Comfortable accommodation in the heart of the Ore Mountains
             </p>
           </div>
 
         {/* Quick info */}
-         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12 text-primary-foreground/70">
-           <div className="flex items-center gap-2">
-             <MapPin className="w-4 h-4" />
-           <span className="text-sm">Pražská 515, Abertamy, Krušné hory</span>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-12 text-primary-foreground/70">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4" />
+              <span className="text-sm">Pražská 515, Abertamy, Ore Mountains</span>
+            </div>
           </div>
-      {/* E-mail odstraněn */}
-     </div>
 
           {/* Navigation */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
             {[
-              { label: "Apartmán", href: "#apartman" },
-              { label: "Galerie", href: "#galerie" },
-              { label: "Lokalita", href: "#lokalita" },
-              { label: "Rezervace", href: "#kontakt" },
+              { label: "Apartment", href: "#apartment" },
+              { label: "Gallery", href: "#gallery" },
+              { label: "Location", href: "#location" },
+              { label: "Contact", href: "#contact" },
             ].map((link) => (
               <a
                 key={link.href}
@@ -50,7 +49,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center pt-8 border-t border-primary-foreground/10">
             <p className="text-sm text-primary-foreground/40">
-              © {currentYear} Apartmán Bellevue Abertamy. Všechna práva vyhrazena.
+              © {currentYear} Apartment Bellevue Abertamy. All rights reserved.
             </p>
           </div>
         </div>
@@ -59,4 +58,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterEN;

@@ -13,32 +13,32 @@ import abertamyParking from "@/assets/abertamy-parking.jpg";
 import abertamySklep from "@/assets/abertamy-sklep.jpg";
 
 const images = [
-  { src: bellevue1, alt: "Obývací pokoj", category: "Interiér" },
-  { src: bellevue5, alt: "Kuchyně", category: "Interiér" },
-  { src: bellevue3, alt: "Ložnice", category: "Interiér" },
-  { src: bellevueKoupelna2, alt: "Koupelna", category: "Interiér" },
-  { src: abertamyWinter, alt: "Budova v zimě", category: "Exteriér" },
-  { src: abertamySummer, alt: "Budova v létě", category: "Exteriér" },
-  { src: okoli2, alt: "Nad mraky", category: "Okolí" },
-  { src: okoli1, alt: "Podzimní výhled", category: "Okolí" },
-  { src: okoli5, alt: "Lesní jezírko", category: "Okolí" },
-  { src: okoli6, alt: "Svítání v horách", category: "Okolí" },
-  { src: abertamyParking, alt: "Parkování", category: "Vybavení" },
-  { src: abertamySklep, alt: "Sdílený sklep na kola", category: "Vybavení" },
+  { src: bellevue1, alt: "Living room", category: "Interior" },
+  { src: bellevue5, alt: "Kitchen", category: "Interior" },
+  { src: bellevue3, alt: "Bedroom", category: "Interior" },
+  { src: bellevueKoupelna2, alt: "Bathroom", category: "Interior" },
+  { src: abertamyWinter, alt: "Building in winter", category: "Exterior" },
+  { src: abertamySummer, alt: "Building in summer", category: "Exterior" },
+  { src: okoli2, alt: "Above the clouds", category: "Surroundings" },
+  { src: okoli1, alt: "Autumn view", category: "Surroundings" },
+  { src: okoli5, alt: "Forest lake", category: "Surroundings" },
+  { src: okoli6, alt: "Mountain sunrise", category: "Surroundings" },
+  { src: abertamyParking, alt: "Parking", category: "Facilities" },
+  { src: abertamySklep, alt: "Shared bike/ski cellar", category: "Facilities" },
 ];
 
-const GallerySection = () => {
+const GallerySectionEN = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section id="galerie" className="py-20 lg:py-28 bg-background">
+    <section id="gallery" className="py-20 lg:py-28 bg-background scroll-mt-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4">
-            Galerie
+            Gallery
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Prohlédněte si náš apartmán a jeho okolí
+            Explore our apartment and its beautiful surroundings
           </p>
         </div>
 
@@ -74,7 +74,7 @@ const GallerySection = () => {
         >
           <img
             src={selectedImage}
-            alt="Zvětšený obrázek"
+            alt="Enlarged view"
             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-elevated"
           />
           <button
@@ -89,4 +89,4 @@ const GallerySection = () => {
   );
 };
 
-export default GallerySection;
+export default GallerySectionEN;

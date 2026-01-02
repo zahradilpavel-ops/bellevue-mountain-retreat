@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Mountain } from "lucide-react";
 
-const Navigation = () => {
+const NavigationEN = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -15,10 +15,10 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { label: "Apartmán", href: "#apartman" },
-    { label: "Galerie", href: "#galerie" },
-    { label: "Lokalita", href: "#lokalita" },
-    { label: "Rezervace", href: "#kontakt" },
+    { label: "Apartment", href: "#apartment" },
+    { label: "Gallery", href: "#gallery" },
+    { label: "Location", href: "#location" },
+    { label: "Booking", href: "#contact" },
   ];
 
   return (
@@ -64,12 +64,12 @@ const Navigation = () => {
             {/* Language Switcher Desktop */}
             <div className="flex items-center ml-2 border-l border-white/20 pl-6">
               <a 
-                href="/en" 
+                href="/" 
                 className={`text-xs font-bold tracking-widest hover:text-primary transition-colors ${
                   isScrolled ? "text-foreground/60" : "text-primary-foreground/80"
                 }`}
               >
-                EN
+                CZ
               </a>
             </div>
 
@@ -79,7 +79,7 @@ const Navigation = () => {
               asChild
               className={!isScrolled ? "py-2 px-4 text-sm" : ""}
             >
-              <a href="#kontakt">Rezervace</a>
+              <a href="#contact">Book Now</a>
             </Button>
           </div>
 
@@ -115,18 +115,18 @@ const Navigation = () => {
               
               {/* Language Switcher Mobile */}
               <a
-                href="/en"
+                href="/"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`text-base font-bold py-2 ${
                   isScrolled ? "text-foreground" : "text-primary-foreground"
                 }`}
               >
-                English (EN)
+                Čeština (CZ)
               </a>
 
               <Button variant="default" size="sm" asChild>
-                <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                  Rezervace
+                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+                  Book Now
                 </a>
               </Button>
             </div>
@@ -137,4 +137,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default NavigationEN;

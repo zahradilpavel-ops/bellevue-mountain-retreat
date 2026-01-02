@@ -1,3 +1,4 @@
+import IndexEN from "./pages/IndexEN";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,6 +19,7 @@ const App = () => (
         <BrowserRouter basename="/">
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/en" element={<IndexEN />} />   
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
