@@ -30,8 +30,8 @@ const ApartmentDescriptionEN = () => {
                 This brand-new, modern 50 m², one-bedroom apartment on the second floor of a newly 
                 constructed building with private parking has been designed with an emphasis 
                 on simple modern style, functionality, and maximum comfort. It offers a 
-                peaceful environment to relax for up to **4 guests**, with plenty of space 
-                for the family and a pleasant seating area on a private terrace.
+                peaceful environment to relax for up to 4 guests, with plenty of space 
+                for a family or group of friends and a pleasant seating area on a private terrace.
               </p>
               <p>
                 The apartment is fully equipped for a comfortable stay in any season. 
