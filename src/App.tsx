@@ -10,6 +10,13 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Logika pro zpracování přesměrování z 404.html (pro GitHub Pages)
+const query = new URLSearchParams(window.location.search);
+const redirectedPath = query.get('p');
+if (redirectedPath) {
+  window.history.replaceState(null, '', redirectedPath);
+}
+
 const App = () => (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
