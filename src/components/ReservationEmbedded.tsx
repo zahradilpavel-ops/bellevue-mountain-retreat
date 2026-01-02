@@ -37,4 +37,3 @@ const ReservationEmbedded = () => {
 };
 
 export default ReservationEmbedded;
-export default ReservationEmbedded;
