@@ -1,9 +1,9 @@
-import { Bed, Trees, ChefHat, Thermometer, Wifi, Car } from "lucide-react";
+import { Bed, Trees, ChefHat, Thermometer, Wifi, Car, Square, Users } from "lucide-react";
 import bellevue1 from "@/assets/bellevue-1.jpg";
 
 const ApartmentDescriptionEN = () => {
   return (
-    <section id="apartment" className="py-20 lg:py-28 bg-card">
+    <section id="apartment" className="py-20 lg:py-28 bg-card scroll-mt-20">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
           {/* Image */}
@@ -27,11 +27,11 @@ const ApartmentDescriptionEN = () => {
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                This brand-new, modern one-bedroom apartment on the second floor of a newly 
+                This brand-new, modern **50 m²** one-bedroom apartment on the second floor of a newly 
                 constructed building with private parking has been designed with an emphasis 
                 on simple modern style, functionality, and maximum comfort. It offers a 
-                peaceful environment to relax after a day in the mountains, plenty of space 
-                for the family, and a pleasant seating area on a private terrace.
+                peaceful environment to relax for up to **4 guests**, with plenty of space 
+                for the family and a pleasant seating area on a private terrace.
               </p>
               <p>
                 The apartment is fully equipped for a comfortable stay in any season. 
@@ -49,9 +49,11 @@ const ApartmentDescriptionEN = () => {
             {/* Features list */}
             <div className="mt-8 grid grid-cols-2 gap-3">
               {[
+                { text: "Area 50 m²", icon: <Square className="w-4 h-4" /> },
+                { text: "For 4 Persons", icon: <Users className="w-4 h-4" /> },
                 { text: "1 Bedroom", icon: <Bed className="w-4 h-4" /> },
                 { text: "Private Terrace", icon: <Trees className="w-4 h-4" /> },
-                { text: "Fully Equipped Kitchen", icon: <ChefHat className="w-4 h-4" /> },
+                { text: "Equipped Kitchen", icon: <ChefHat className="w-4 h-4" /> },
                 { text: "Underfloor Heating", icon: <Thermometer className="w-4 h-4" /> },
                 { text: "Wi-Fi & TV", icon: <Wifi className="w-4 h-4" /> },
                 { text: "On-site Parking", icon: <Car className="w-4 h-4" /> },
